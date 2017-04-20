@@ -1,0 +1,16 @@
+{
+  "name": "Kinogo.co add remover",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Remove ads on kinogo.co",
+  "homepage_url": "https://github.com/gebeto/chrome-plugins",
+  "minimum_chrome_version": "21",
+  "icons": {
+       "128": "icons/128.png",
+       "32": "icons/32.png"
+  },
+  "content_scripts": [
+    { "matches": ["<all_urls>"], "js": ["js/content.js"], "run_at": "document_end" }
+  ],
+  "permissions":["*://*/*", "<all_urls>"]
+}
