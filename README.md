@@ -11,7 +11,7 @@ Features
 Installation
 ------------
 
-**Option 1** – just install it from the [Chrome Web Store](https://chrome.google.com).
+<strike>**Option 1** – just install it from the [Chrome Web Store](https://chrome.google.com).</strike>
 
 **Option 2** – install it from source:
 

@@ -1,8 +1,8 @@
 {
-  "name": "VK Code",
+  "name": "VK Shortcuts",
   "version": "0.1",
   "manifest_version": 2,
-  "description": "Code highlight in VK",
+  "description": "Shortcuts in VK",
   "homepage_url": "https://github.com/gebeto/chrome-plugins",
   "minimum_chrome_version": "21",
   "icons": {
