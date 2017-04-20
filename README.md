@@ -2,7 +2,7 @@ VK Code
 ==============
 Chrome extension for highlighting code on VK.COM.
 
-Features
+VK Shortcut
 ==============
 Chrome adding shortcuts on VK.COM.
 
