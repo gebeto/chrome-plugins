@@ -1,0 +1,21 @@
+{
+  "name": "VK Code",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Code highlight in VK",
+  "homepage_url": "https://github.com/gebeto/vk-code",
+  "minimum_chrome_version": "21",
+  "icons": {
+       "128": "icons/128.png",
+       "32": "icons/32.png"
+  },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    // { "matches": ["<all_urls>"], "js": ["js/content.js"], "run_at": "document_start" }
+    { "matches": ["<all_urls>"], "js": ["js/content.js"], "run_at": "document_idle" }
+    // { "matches": ["<all_urls>"], "js": ["js/content.js"], "run_at": "document_end" }
+  ],
+  "permissions":["*://*/*", "<all_urls>"]
+}
