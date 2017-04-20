@@ -9,13 +9,18 @@
        "128": "icons/128.png",
        "32": "icons/32.png"
   },
-  "background": {
-    "scripts": ["js/background.js"]
-  },
   "content_scripts": [
-    // { "matches": ["<all_urls>"], "js": ["js/content.js"], "run_at": "document_start" }
-    { "matches": ["<all_urls>"], "js": ["js/content.js"], "run_at": "document_idle" }
-    // { "matches": ["<all_urls>"], "js": ["js/content.js"], "run_at": "document_end" }
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/prism.js"],
+      // "css": ["css/prism.css"],
+      "css": ["css/purple.css"],
+      "run_at": "document_start"
+    }, {
+      "matches": ["<all_urls>"],
+      "js": ["js/main.js"],
+      "run_at": "document_idle"
+    }
   ],
   "permissions":["*://*/*", "<all_urls>"]
 }
