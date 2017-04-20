@@ -1,12 +1,11 @@
 VK Code
 ==============
-
 Chrome extension for highlighting code on VK.COM.
 
 Features
---------
+==============
+Chrome adding shortcuts on VK.COM.
 
-* VK Post code highlight
 
 Installation
 ------------
