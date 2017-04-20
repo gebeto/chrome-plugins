@@ -1,9 +1,12 @@
-VK Code
+Chrome Plugins
 ==============
+
+VK Code
+------------
 Chrome extension for highlighting code on VK.COM.
 
 VK Shortcut
-==============
+------------
 Chrome adding shortcuts on VK.COM.
 
 
