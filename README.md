@@ -1,4 +1,4 @@
-#VK Code
+VK Code
 ==============
 
 Chrome extension for highlighting code on VK.COM.
