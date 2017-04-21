@@ -4,7 +4,7 @@ Chrome Plugins
 **VK Code** - 
 	Chrome extension for highlighting code on VK.COM.
 
-**VK Shortcut** - 
+**VK Tweak** - 
 	Chrome adding shortcuts on VK.COM.
 
 

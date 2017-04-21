@@ -1,12 +1,13 @@
 {
-  "name": "VK Shortcuts",
+  "name": "VK Tweak",
   "version": "0.1",
   "manifest_version": 2,
-  "description": "Shortcuts in VK",
+  "description": "Tweak in VK",
   "homepage_url": "https://github.com/gebeto/chrome-plugins",
   "minimum_chrome_version": "21",
   "content_scripts": [
     // { "matches": ["https://vk.com/*"], "js": ["main_start.js"], "run_at": "document_start" },
+    { "matches": ["https://vk.com/*"], "js": ["MenuControlButton.js"], "run_at": "document_start" },
     { "matches": ["https://vk.com/*"], "js": ["main_start.js"], "run_at": "document_idle" },
     { "matches": ["https://vk.com/*"], "js": ["main_end.js"], "run_at": "document_end" }
   ],
