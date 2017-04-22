@@ -2,7 +2,6 @@
 function MenuControlButton(storageVar, title) {
 	this.storageVar = storageVar;
 	this.title = title;
-	console.log(localStorage.getItem(storageVar));
 	this.controlButton = document.createElement('li');
 	this.controlButton.className = 'l_comm';
 	this.controlButton.addEventListener('click', function() {

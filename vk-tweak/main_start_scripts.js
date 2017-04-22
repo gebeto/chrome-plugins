@@ -5,7 +5,8 @@
 	console.log("SHORTCUTS START!");
 
 	var script = document.createElement('script');
-	script.innerHTML = `ajax.post = function (url, query, options) {
+	script.innerHTML = `
+	ajax.post = function (url, query, options) {
 		console.log('POST:', url, query, options);
 		if (query['act'] === 'a_mark_read' && localStorage.getItem('markAsRead')) {
 			query['act'] = '';
@@ -67,7 +68,7 @@
 	}
 	
 	ajax.plainpost = function (url, query, done, fail, urlonly, options) {
-		// console.log('PLAINPOST:', url, query, options, done.toString());
+		console.log('PLAINPOST:', url, query, options, done);
 		var r = ajax._getreq();
 		var q = (typeof(query) != 'string') ? ajx2q(query) : query;
 		r.onreadystatechange = function() {
@@ -101,6 +102,6 @@
 	}
 
 	`;
-	document.body.appendChild(script);
+
 
 })();
