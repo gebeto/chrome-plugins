@@ -4,8 +4,6 @@
 
 	console.log("SHORTCUTS START!");
 
-	document.body.appendChild(script);
-
 	var style =  document.createElement('style');
 	style.innerHTML = `
 	@keyframes roll {

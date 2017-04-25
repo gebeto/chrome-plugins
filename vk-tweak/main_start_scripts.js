@@ -103,5 +103,7 @@
 
 	`;
 
+	document.body.appendChild(script);
+
 
 })();

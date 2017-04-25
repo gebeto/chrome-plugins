@@ -6,10 +6,10 @@
   "homepage_url": "https://github.com/gebeto/chrome-plugins",
   "minimum_chrome_version": "21",
   "content_scripts": [
-    // { "matches": ["https://vk.com/*"], "js": ["main_start.js"], "run_at": "document_start" },
     { "matches": ["https://vk.com/*"], "js": ["MenuControlButton.js"], "run_at": "document_start" },
-    { "matches": ["https://vk.com/*"], "js": ["main_start_scripts.js"], "run_at": "document_idle" },
-    { "matches": ["https://vk.com/*"], "js": ["main_start_styles.js"], "run_at": "document_idle" },
+    { "matches": ["https://vk.com/*"], "js": ["main_start_scripts.js"], "run_at": "document_end" },
+    { "matches": ["https://vk.com/*"], "js": ["main_start_styles.js"], "run_at": "document_end" },
+    // { "matches": ["https://vk.com/*"], "js": ["main_end.js"], "run_at": "document_end" }
     { "matches": ["https://vk.com/*"], "js": ["main_end.js"], "run_at": "document_end" }
   ],
   "permissions":["https://vk.com/*"]
