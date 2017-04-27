@@ -101,6 +101,54 @@
 		return r;
 	}
 
+
+	aaaaaaaddEvent = function addEvent(elem, types, handler, custom, context, useCapture) {
+		elem = ge(elem);
+		if (types ==='click') {
+			if (handler.toString().includes('nim-dialog_unread')) {alert('KEK')}
+			console.log(handler);
+		}
+		if (!elem || elem.nodeType == 3 || elem.nodeType == 8) { // 3 - Node.TEXT_NODE, 8 - Node.COMMENT_NODE
+			return;
+		}
+
+		var realHandler = context ? function() {
+			var newHandler = function(e) {
+				var prevData = e.data;
+				e.data = context;
+				var ret = handler.apply(this, [e]);
+				e.data = prevData;
+				return ret;
+			}
+			newHandler.handler = handler;
+			return newHandler;
+		}() : handler;
+
+		// For IE
+		if (elem.setInterval && elem != window) elem = window;
+
+		var events = data(elem, 'events') || data(elem, 'events', {}),
+				handle = data(elem, 'handle') || data(elem, 'handle', function() {
+					_eventHandle.apply(arguments.callee.elem, arguments);
+				});
+		// to prevent a memory leak
+		handle.elem = elem;
+
+		each(types.split(/\s+/), function(index, type) {
+			if (!events[type]) {
+				events[type] = [];
+				if (!custom && elem.addEventListener) {
+					elem.addEventListener(type, handle, useCapture);
+				} else if (!custom && elem.attachEvent) {
+					elem.attachEvent('on' + type, handle);
+				}
+			}
+			events[type].push(realHandler);
+		});
+
+		elem = null;
+	}
+
 	`;
 
 	document.body.appendChild(script);
