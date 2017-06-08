@@ -6,7 +6,8 @@
   "homepage_url": "https://github.com/gebeto/chrome-plugins",
   "minimum_chrome_version": "21",
   "content_scripts": [
-    { "matches": ["https://gist.github.com/*"], "js": ["index.js"], "run_at": "document_end" }
+    { "matches": ["https://gist.github.com/*/*"], "js": ["index.js"], "run_at": "document_end" },
+    { "matches": ["https://github.com/*.js"], "js": ["index.js"], "run_at": "document_end" }
   ],
-  "permissions":["https://gist.github.com/*"]
+  "permissions":["https://gist.github.com/*/*"]
 }

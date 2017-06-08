@@ -2,10 +2,8 @@
 
 	"use strict";
 
-	console.log("RAWGIT!");
-
 	var files = document.querySelectorAll('.file-actions');
-	var urlField = document.querySelector('.js-zeroclipboard-container').querySelector('input');
+	// var urlField = document.querySelector('.js-zeroclipboard-container').querySelector('input');
 	
 	function rawGitButton(urlField, url, title, description, replacer) {
 		description = description || ('Copy ' + title + ' to clipboard');
@@ -15,7 +13,6 @@
 		btn.setAttribute('aria-label', description);
 		btn.textContent = title;
 		btn.addEventListener('click', function(e) {
-			console.log(url);
 			url = url.replace('gist.github.com', replacer);
 			urlField.value = url;
 			urlField.select();
@@ -43,7 +40,7 @@
 		var spu = btn.href.split('.');
 		if (spu[spu.length - 1] === 'js') {
 			var input = inputTextReadOnlyField();
-			item.appendChild(rawGitButton(input, btn.href, 'RawGit Develop', 'Copy script URL for development', 'rawgit.com'));
+			item.appendChild(rawGitButton(input, btn.href, 'RawGit Development', 'Copy script URL for development', 'rawgit.com'));
 			item.appendChild(rawGitButton(input, btn.href, 'RawGit CDN', 'Copy script URL for production', 'cdn.rawgit.com'));
 			item.appendChild(input);
 		}
