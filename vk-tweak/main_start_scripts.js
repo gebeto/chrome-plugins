@@ -16,6 +16,8 @@
 			query['act'] = '';
 		} else if (query['act'] === 'a_clean_notify' && localStorage.getItem('markFeedBackAsRead')) {
 			query['act'] = '';
+		} else if (query['act'] === 'a_onlines') {
+			query['act'] = 'a_offlines';
 		}
 		query['_full_page'] = false;
 		if (url.substr(0, 1) != '/' && url.substr(0, 4) != 'http') url = '/' + url;
@@ -147,6 +149,20 @@
 		});
 
 		elem = null;
+	}
+
+	ajax.framepost = function (url, query, done) {
+		console.log('FRAMEPOST', url, query);
+		clearTimeout(iframeTO);
+		if (window.iframeTransport) {
+			ajax._frameover();
+		}
+		window.iframeTransport = utilsNode.appendChild(ce('div', {innerHTML: '<iframe></iframe>'})).firstChild;
+		ajax._framedone = done;
+		ajax.framedata = [true];
+		url += '?' + ((typeof(query) != 'string') ? ajx2q(query) : query);
+		url += (url.charAt(url.length - 1) != '?' ? '&' : '') + '_rndVer=' + irand(0, 99999);
+		ajax._frameurl = iframeTransport.src = url;
 	}
 
 	`;
