@@ -1,0 +1,13 @@
+{
+  "name": "VK Tweak",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Tweak for VK",
+  "homepage_url": "https://github.com/gebeto/chrome-plugins",
+  "minimum_chrome_version": "21",
+  "content_scripts": [
+    { "matches": ["http://trac.leadsoft.name/*"], "js": ["SearchField.js"], "run_at": "document_start" },
+    { "matches": ["http://trac.leadsoft.name/*"], "js": ["main_end.js"], "run_at": "document_end" }
+  ],
+  "permissions":["http://trac.leadsoft.name/*"]
+}
