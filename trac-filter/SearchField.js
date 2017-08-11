@@ -1,6 +1,6 @@
-function Select(values) {
+function Select(values, allTitle) {
 	var select = document.createElement('select');
-	var shtml = '<option value="">all</option>';
+	var shtml = '<option value="">all ' + allTitle + '</option>';
 	for (var i = 0; i < values.length; i++) {
 		shtml += '<option value="' + values[i] + '">' + values[i] + '</option>';
 	}
@@ -42,13 +42,13 @@ function SearchField(tableBody) {
  		return item.owner;
  	}).filter(function(item, index, arr) {
  		if (arr.indexOf(item) === index) {return true;}
- 	}));
+ 	}), 'owners');
 
  	this.statusesSelect = new Select(rows.map(function(item, index) {
  		return item.status;
  	}).filter(function(item, index, arr) {
  		if (arr.indexOf(item) === index) {return true;}
- 	}));
+ 	}), 'statuses');
 	
 	this.ownerSelect.addEventListener('change', filter.bind(this));
 	this.statusesSelect.addEventListener('change', filter.bind(this));

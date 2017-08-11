@@ -1,8 +1,8 @@
 {
-  "name": "VK Tweak",
+  "name": "Trac Filter",
   "version": "0.1",
   "manifest_version": 2,
-  "description": "Tweak for VK",
+  "description": "Tweak for TRAC",
   "homepage_url": "https://github.com/gebeto/chrome-plugins",
   "minimum_chrome_version": "21",
   "content_scripts": [
