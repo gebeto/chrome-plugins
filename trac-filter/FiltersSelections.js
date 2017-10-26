@@ -8,12 +8,12 @@ function Select(values, allTitle) {
 	return select;
 }
 
-function SearchField(tableBody) {
+function FiltersSelections(tableBody) {
 	this.searchInputWrapper = document.createElement('div');
-	this.searchInputWrapper.style.position = 'fixed';
-	this.searchInputWrapper.style.top = '0px';
-	this.searchInputWrapper.style.width = '100%';
-	this.searchInputWrapper.style.textAlign = 'center';
+	// this.searchInputWrapper.style.position = 'fixed';
+	// this.searchInputWrapper.style.top = '0px';
+	// this.searchInputWrapper.style.width = '100%';
+	// this.searchInputWrapper.style.textAlign = 'center';
 
 	var rows = [];
 	if (tableBody) {
@@ -52,7 +52,8 @@ function SearchField(tableBody) {
 	
 	this.ownerSelect.addEventListener('change', filter.bind(this));
 	this.statusesSelect.addEventListener('change', filter.bind(this));
-
+	
+	this.searchInputWrapper.innerHTML = '<h2 style="display: inline; margin-right: 6px;">Sort | Filter</h2>';
 	this.searchInputWrapper.appendChild(this.ownerSelect);
 	this.searchInputWrapper.appendChild(this.statusesSelect);
 	return this.searchInputWrapper;
