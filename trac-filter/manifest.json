@@ -1,6 +1,6 @@
 {
   "name": "Trac Filter",
-  "version": "0.3",
+  "version": "0.4",
   "manifest_version": 2,
   "description": "Tweak for TRAC",
   "homepage_url": "https://github.com/gebeto/chrome-plugins",
@@ -8,7 +8,8 @@
   "content_scripts": [
     { "matches": ["http://trac.leadsoft.name/*"], "js": ["FiltersSelections.js"], "run_at": "document_start" },
     { "matches": ["http://trac.leadsoft.name/*"], "js": ["HoursSorter.js"], "run_at": "document_start" },
-    { "matches": ["http://trac.leadsoft.name/*"], "js": ["main_end.js"], "run_at": "document_end" }
+    { "matches": ["http://trac.leadsoft.name/*"], "js": ["main_end.js"], "run_at": "document_end" },
+    { "matches": ["http://trac.leadsoft.name/*"], "js": ["hours_end.js"], "run_at": "document_end" }
   ],
   "permissions":["http://trac.leadsoft.name/*"]
 }

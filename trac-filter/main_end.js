@@ -18,6 +18,10 @@
 		var sorter = new HoursSorter();
 		sorter.sort();
 	}
+
+	if (true) {
+
+	}
 	
 
 })();
