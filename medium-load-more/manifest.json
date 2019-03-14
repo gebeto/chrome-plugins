@@ -6,8 +6,8 @@
   "homepage_url": "https://github.com/gebeto/chrome-plugins",
   "minimum_chrome_version": "21",
   "content_scripts": [
-    { "matches": ["https://medium.com/*"], "js": ["main_start.js"], "run_at": "document_start" }, // файл стартует в начале загрузки страницы
-    { "matches": ["https://medium.com/*"], "js": ["main_end.js"], "run_at": "document_end" } // файл стартует в после того как страница загрузилась
+    { "matches": ["https://medium.com/*"], "js": ["main_start.js"], "run_at": "document_start" },
+    { "matches": ["https://medium.com/*"], "js": ["main_end.js"], "run_at": "document_end" }
   ],
   "permissions":["https://medium.com/*"]
 }
