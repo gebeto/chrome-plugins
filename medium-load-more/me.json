@@ -1,0 +1,27 @@
+{
+  "name": "Medium Premium Articles",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Подгрузка премиум статтей",
+  "homepage_url": "https://github.com/gebeto/chrome-plugins",
+  "minimum_chrome_version": "21",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://medium.com/*",
+        "https://*.medium.com/*"
+      ],
+      "js": ["main_start.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://medium.com/*",
+        "https://*.medium.com/*"
+      ],
+      "js": ["main_end.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions":["https://medium.com/*", "https://*.medium.com/*"]
+}
